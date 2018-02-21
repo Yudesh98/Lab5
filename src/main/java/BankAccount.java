@@ -20,16 +20,65 @@ public class BankAccount {
     }
 
     private int accountNumber;
-    public BankAccountType accountType;
+    private BankAccountType accountType;
     private double accountBalance;
     private String ownerName;
-    public double interestRate;
+    private double interestRate;
     private double interestEarned;
 
-    public BankAccount(final String name, final BankAccountType accountCategory) {
-        /*
-         * Implement this function
-         */
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(final int setAccountNumber) {
+        this.accountNumber = setAccountNumber;
+    }
+
+    public BankAccountType getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(final BankAccountType setAccountType) {
+        this.accountType = setAccountType;
+    }
+
+    public double getAccountBalance() {
+        return accountBalance;
+    }
+
+    public void setAccountBalance(final double setAccountBalance) {
+        this.accountBalance = setAccountBalance;
+    }
+
+    public String getOwnerName() {
+        return ownerName;
+    }
+
+    public void setOwnerName(final String setOwnerName) {
+        this.ownerName = setOwnerName;
+    }
+
+    public double getInterestRate() {
+        return interestRate;
+    }
+
+    public void setInterestRate(final double setInterestRate) {
+        this.interestRate = setInterestRate;
+    }
+
+    public double getInterestEarned() {
+        return interestEarned;
+    }
+
+    public void setInterestEarned(final double setInterestEarned) {
+        this.interestEarned = setInterestEarned;
+    }
+
+
+    public BankAccount(final String name, final BankAccountType setAccountCategory) {
+        ownerName = name;
+        accountType = setAccountCategory;
+        Bank.totalAccounts++;
     }
 
     /*
